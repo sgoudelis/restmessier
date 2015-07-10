@@ -22,7 +22,7 @@ $ ./astrocat.py
 ### Get a list of Messier objects
 
 ```
-$ curl -i -H -X GET http://localhost:5000/astronomy/messier/
+$ curl -i http://localhost:5000/astronomy/messier/
 
 Content-Type: application/json
 Content-Length: 37214
@@ -42,9 +42,39 @@ Date: Fri, 10 Jul 2015 10:16:19 GMT
         "type": "Point"
       }, 
       "mid": "M79", 
-      "ncgid": "NGC 1904", 
+      "ngcid": "NGC 1904", 
       "remarks": "Globular cluster", 
       "url": "/astronomy/messier/M79"
     }, 
 ...
+```
+
+### Get a single Messier object
+
+```
+$ curl -i http://localhost:5000/astronomy/messier/m82
+curl: (6) Could not resolve host: GET
+HTTP/1.0 200 OK
+Content-Type: application/json
+Content-Length: 369
+Server: Werkzeug/0.10.4 Python/2.7.9
+Date: Fri, 10 Jul 2015 10:20:19 GMT
+
+{
+  "object": {
+    "_id": "559bacd8e5e7103b9611f3f5", 
+    "constellation": "URSA MAJOR", 
+    "loc": {
+      "coordinates": [
+        9.5154, 
+        69.56
+      ], 
+      "type": "Point"
+    }, 
+    "mid": "M82", 
+    "ngcid": "NGC 3034", 
+    "remarks": "Galaxy   irregular Radio source", 
+    "url": "/astronomy/messier/M82"
+  }, 
+  "responded": 1436523619.1128
 ```
