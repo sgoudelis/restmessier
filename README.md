@@ -11,7 +11,7 @@ This is a simple RESTful Web API for CRUD operations on a collection of Messier 
 3. flask
 4. python 2.7+
 
-## Start up the API with the development server of Flask
+### Start up the API with the development server of Flask
 
 ```
 $ ./astrocat.py
@@ -19,7 +19,7 @@ $ ./astrocat.py
  * Restarting with stat
 ```
 
-## Get a list of Messier objects
+### Get a list of Messier objects
 
 ```
 $ curl -i -H -X GET http://localhost:5000/astronomy/messier/
