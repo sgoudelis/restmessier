@@ -4,6 +4,9 @@
 
 This is a simple RESTful Web API for CRUD operations on a collection of Messier celestial targets based on MongoDB. Also, the Geospatial api of MongoDB is used which provides the functionlity of quering the API for objects that are nearby another Messier object or a set of WGS84 coordinates. This API is also a WSGI application with allows for easy scaling.
 
+What is a Messier object? https://en.wikipedia.org/wiki/Messier_object
+
+
 ## Requirements
 
 1. PyMongo
