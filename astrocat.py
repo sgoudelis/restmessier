@@ -162,6 +162,9 @@ def delete_messier_object_by_mid(mid):
     mid = mid.upper()
     messier_object = messier_collection.find_one({'mid': mid})
     
+    if not messier_object:
+        abort(404)
+    
     result = messier_collection.delete_one({'_id': messier_object['_id']})
     if result.deleted_count == 0:
         abort(501)
