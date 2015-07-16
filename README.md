@@ -40,7 +40,6 @@ $ ./astrocat.py
 
 ```
 $ curl -i http://localhost:5000/astronomy/messier/
-
 Content-Type: application/json
 Content-Length: 37214
 Server: Werkzeug/0.10.4 Python/2.7.9
@@ -69,8 +68,7 @@ Date: Fri, 10 Jul 2015 10:16:19 GMT
 ### Get a single Messier object
 
 ```
-$ curl -i http://localhost:5000/astronomy/messier/m82
-curl: (6) Could not resolve host: GET
+$ curl -i -X GET http://localhost:5000/astronomy/messier/m82
 HTTP/1.0 200 OK
 Content-Type: application/json
 Content-Length: 369
