@@ -7,6 +7,10 @@ This is a simple RESTful Web API for CRUD operations on a collection of Messier 
 What is a Messier object? https://en.wikipedia.org/wiki/Messier_object
 
 
+## Todo
+
+1. Proper caching headers
+
 ## Requirements
 
 1. PyMongo
