@@ -18,7 +18,7 @@ What is a Messier object? https://en.wikipedia.org/wiki/Messier_object
 3. flask
 4. python 2.7+
 
-### Prerequisites
+### Setup
 
 Create a virtual enviroment with virtualenv.
 
