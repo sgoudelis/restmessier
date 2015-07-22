@@ -10,6 +10,7 @@ What is a Messier object? https://en.wikipedia.org/wiki/Messier_object
 ## Todo
 
 1. Proper caching headers
+2. Proper message formatting
 
 ## Requirements
 
