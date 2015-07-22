@@ -279,3 +279,6 @@ Date: Thu, 16 Jul 2015 09:11:01 GMT
 
 ```
 
+### Licence
+
+Restmessier is a free software distributed under the terms of the MIT license
