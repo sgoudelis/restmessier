@@ -13,6 +13,7 @@ client = MongoClient(mongodb_url)
 astronomydb = client.AstronomyCatalogs
 messier_collection = astronomydb.Messier
 
+
 def message_template():
     """
     Return a message template for consistency throughout
@@ -21,7 +22,8 @@ def message_template():
                'responded': time.time(),
                }
     return message
-    
+
+
 def sanitize(message):
     """
     Sanitize message, use JSONEncoder
@@ -35,6 +37,7 @@ def sanitize(message):
     message = JSONEncoder().encode(message)
     message = json.loads(message)
     return message
+
 
 @app.route('/astronomy/messier/', methods=['GET'])
 def list_messier_objects():
@@ -60,6 +63,7 @@ def list_messier_objects():
     # return message
     return jsonify(message)
 
+
 @app.route('/astronomy/messier/<string:mid>', methods=['GET'])
 def get_messier_object_by_mid(mid):
     """
@@ -81,6 +85,7 @@ def get_messier_object_by_mid(mid):
     message = sanitize(message)
     
     return jsonify(message)
+
 
 @app.route('/astronomy/messier/', methods=['POST'])
 def create_messier_object_by_mid():
@@ -121,6 +126,7 @@ def create_messier_object_by_mid():
     
     return jsonify(message)
 
+
 @app.route('/astronomy/messier/<string:mid>', methods=['PUT'])
 def update_messier_object_by_mid(mid):
     """
@@ -152,7 +158,8 @@ def update_messier_object_by_mid(mid):
     message = sanitize(message)
     
     return jsonify(message)
-    
+
+
 @app.route('/astronomy/messier/<string:mid>', methods=['DELETE'])
 def delete_messier_object_by_mid(mid):
     """
@@ -178,7 +185,8 @@ def delete_messier_object_by_mid(mid):
     message = sanitize(message)
     
     return jsonify(message)
-      
+
+
 @app.route('/astronomy/messier/<string:mid>/nearby/<int:degrees>', methods=['GET'])   
 def get_nearby_objects_by_mid(mid, degrees):
     """
@@ -221,7 +229,8 @@ def get_nearby_objects_by_mid(mid, degrees):
     message = sanitize(message)
     
     return jsonify(message)
-    
+
+
 @app.route('/astronomy/messier/nearby/<float:ra>/<float:dec>/<int:degrees>', methods=['GET'])   
 def get_nearby_objects_by_coord(ra, dec, degrees):
     """
@@ -260,5 +269,3 @@ def get_nearby_objects_by_coord(ra, dec, degrees):
         
 if __name__ == '__main__':
     app.run(debug=True)
-    
-    
